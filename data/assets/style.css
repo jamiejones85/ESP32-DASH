@@ -1,0 +1,161 @@
+body {
+    margin: 0;
+}
+#background {
+    background-image: url('Background.png');
+    height:600px;
+    width: 1024px;
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    color:white;
+    font-family: monospace;
+    font-weight: bold;
+}
+#background #battery {
+    grid-column-start: 1;
+    grid-column-end: 1;
+}
+
+#background #power {
+    grid-column-start: 3;
+    grid-column-end: 3;
+}
+
+#background #centre {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    /* display: grid;
+    grid-template-rows: 5fr 10fr 5fr;
+    grid-template-columns: 1fr 5fr 1fr; */
+}
+
+#background #centre #temps {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    font-size: 25px;
+}
+
+#background #centre #temps #battery-temp {
+    position: relative;
+    top: 60px;
+    left: 90px;
+    width: 90px;
+    text-align: center;
+}
+
+#background #centre #temps #motor-temp {
+    position: relative;
+    top: 45px;
+    left: 80px;
+    width: 90px;
+    text-align: center;
+}
+
+#background #centre #temps #inverter-temp {
+    position: relative;
+    top: 55px;
+    left: 75px;
+    width: 120px;
+    text-align: center;
+}
+
+#background #centre #info {
+    grid-row-start: 2;
+    display: grid;
+    grid-template-columns: 2fr 4fr 4fr 4fr 2fr;
+    font-size: 25px;
+}
+
+#background #centre #info #trip{
+    grid-column-start: 2;
+    text-align: right;
+}
+
+#background #centre #info #avg{
+    grid-column-start: 4;
+    text-align: left;
+}
+
+#background #centre #main {
+    grid-row-start: 1;
+    display: grid;
+    grid-template-columns:  6.2fr 12fr 5.8fr;
+    grid-template-rows: 7fr 8fr 2fr;
+}
+
+
+#background #centre #main #speed {
+    grid-column-start: 2;
+    grid-row-start: 2;
+}
+
+#background #centre #main #speed #speed-value {
+    font-size: 160px;
+    text-align: center;
+}
+
+#background #centre #main #speed #speed-unit {
+    font-size: 40px;
+    text-align: center;
+}
+
+#battery {
+    display: grid;
+    grid-template-columns: 5fr 6fr 5fr;
+    grid-template-rows: 60px 40px 40px 40px 400px;
+}
+#battery #percentage {
+    grid-column-start: 2;
+    grid-row-start: 4;
+    font-size: 24px;
+    text-align: center;
+}
+#battery-bar {
+    grid-column-start: 2;
+    grid-row-start: 5;
+}
+#battery-bar > div,
+#power-bar > div,
+#regen-bar > div {
+    height: 30px;
+    width: 50px;
+    border: solid 2px white;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+#power-bar > div,
+#regen-bar > div {
+    height: 20px;
+}
+
+.full-box{
+    background-color: white;
+}
+
+#power {
+    display: grid;
+    grid-template-columns: 5fr 6fr 5fr;
+    grid-template-rows: 60px 390px 200px;
+}
+
+#power #current {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    text-align: center;
+    font-size: 24px;
+    line-height: 90px;
+}
+
+#power #power-bar {
+    grid-column-start: 2;
+    grid-row-start: 2;
+}
+
+#power #regen-bar {
+    grid-column-start: 2;
+    grid-row-start: 3;
+}
